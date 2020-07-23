@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Number</title>
+</head>
+<body>
+    <h1>Friend Numbers</h1>
+   <input type="number" id ="minF" placeholder="Valor mínimo">
+    <input type="number" id="friend" placeholder="Valor máximo">
+    <input type="button" value="Confirm" id="B_okay" onclick="okay()">
+    <p id="res"></p>
+<script>
+    var Nfriend = document.getElementById("res")
+function okay () {
+    var MF = document.getElementById("minF").value
+    var S = document.getElementById("friend").value
+    var F = Number (MF)
+    var S1 = Number (S)
+    var F = (MF)
+    var N = S
+    if (N <= 1) {
+        alert("Número inválido!");
+    }
+    var s = 0;
+    for ( var n = MF; n < N; n++)
+    if (n === factors(factors(n)) && n !== factors(n)) {
+        s = 1;
+        Nfriend.innerHTML+=(`<strong>${factors(factors(n))}</strong> , <strong>${factors(n)}</strong><br>`)
+    }
+    if (s == 0)
+    Nfriend.innerHTML+=(`Não há números amigos entre ${MF} e ${N}.`)
+    }
+    function factors(n) {
+        var sum = 0
+        for (var N = 1; N < n; N++)
+            if (Number.isInteger(n / N))
+                sum += N;
+        return sum;        
+    }
+</script>
+    </body>
+    </html>
